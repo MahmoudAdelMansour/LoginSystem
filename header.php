@@ -26,15 +26,11 @@
         <!-- The Login Of Page-->
       <div class="header-login">
         <form class="login-f"  method="post">
-          <input type="text" name="userin" placeholder="Username E-mail"  />
-          <input type="password" name="pwd" placeholder="Password"  />
+          <input type="text" name="userin" placeholder="Username E-mail" minlength="6" maxlength="20" required />
+          <input type="password" name="pwd" placeholder="Password" minlength="6" maxlength="20" required />
           <button type="submit" name="login-submit">Login</button>
         </form>
-        <form class="login-f" action="includes/login.inc.php" method="post">
-          <input type="text" name="userin" placeholder="Username E-mail"/>
-          <input type="password" name="pwd" placeholder="Password" />
-          <button type="submit" name="login-submit">Login</button>
-        </form>
+
         <!-- The Register Of Page-->
         <a href="signup.php" class="signup-l">SignUp</a>
         <!-- The signout Of Page-->

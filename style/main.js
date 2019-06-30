@@ -1,10 +1,6 @@
 var aboutme = document.getElementById('about');
 aboutme.onclick = function aboutus(){
   alert('Designed By Mahmoud');
-}
-var aboutme = document.getElementById('about');
-aboutme.onclick = function aboutus(){
-  alert('Designed By Mahmoud');
 };
 //Validate The Input (FrontEnd)
 /*
@@ -28,4 +24,5 @@ return false;
 }
 else {
 document.getElementById('error').innerHTML = '<h1 style=\"color:green\;\">Correct Username </h1>';
+}
 }
