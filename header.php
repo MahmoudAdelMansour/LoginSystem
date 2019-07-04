@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -23,20 +24,27 @@
           </li>
         </ul>
       </nav>
-        <!-- The Login Of Page-->
-      <div class="header-login">
-        <form class="login-f"  method="post">
-          <input type="text" name="userin" placeholder="Username E-mail" minlength="6" maxlength="20" required />
-          <input type="password" name="pwd" placeholder="Password" minlength="6" maxlength="20" required />
-          <button type="submit" name="login-submit">Login</button>
-        </form>
+      <!-- The signout Of Page-->
+      <?php
+        if (isset($_SESSION['userId']) && isset($_SESSION['userName'])) {
+          echo "<form class=\"signout-f\" action=\"includes/logout.inc.php\" method=\"post\">
+            <button type=\"submit\" name=\"logout-submit\">Logout</button>
+          </form>";
+        }else{
+          echo "<!-- The Login Of Page-->
+          <div class=\"header-login\">
+            <form class=\"login-f\" action=\"includes/login.inc.php\"  method=\"post\">
+              <input type=\"text\" name=\"userin\" placeholder=\"Username E-mail\" minlength=\"6\" maxlength=\"20\" required />
+              <input type=\"password\" name=\"pwd\" placeholder=\"Password\" minlength=\"6\" maxlength=\"20\" required />
+              <button type=\"submit\" name=\"login-submit\">Login</button>
+            </form>
 
-        <!-- The Register Of Page-->
-        <a href="signup.php" class="signup-l">SignUp</a>
-        <!-- The signout Of Page-->
-        <form class="signout-f" action="includes/logout.inc.php" method="post">
-          <button type="submit" name="logout-submit">Logout</button>
-        </form>
+            <!-- The Register Of Page-->
+            <a href=\"signup.php\" class=\"signup-l\">SignUp</a>";
+        }
+      ?>
+
+
       </div>
     </header>
     <!-- End Of Header -->

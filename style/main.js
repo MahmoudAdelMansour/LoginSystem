@@ -7,7 +7,7 @@ aboutme.onclick = function aboutus(){
 1-Inputs require
 2-input > 5 & password > 8 & Email > 8
 3-Not Empty
-4- Input !< 11 & Password !< 22 & email !< 20
+4- Input !< 11 & Password !< 24 & email  !< 20
 */
 var form          = document.getElementById('formone');
 var allFormInput  = form.elements;
